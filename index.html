@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
+    integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>inspireCheckpoint</title>
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="debg">
+  <header>
+
+  </header>
+  <main class="">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 position-fixed glass-card text-center rounded">
+          Painter:
+          <h1 class="fs-5" id="painter"></h1>
+        </div>
+        <div class="col-3 m-auto text-center">
+          <h1 class="text-dark glass-card rounded" id="time"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row my-3 justify-content-between align-items-center">
+        <div class="col-2 glass-card text-center rounded selectable no-select" onclick="app.weatherController.changeType()">
+          <div>
+            <h1><span id="weather"></span></h1>
+          </div>
+        </div>
+        <!-- <div class="col-md-3 glass-card rounded">
+          <div class="d-flex justify-content-between">
+            <h1 class="fs-5 text-center">Your Goals</h1>
+            <span id="goalCount"></span>
+          </div>
+          <div id="todos">
+            <h2 class="fs-5 text-center text-warning">Make a Goal to start making progress!!!</h2> -->
+            <!-- <div class="form-check pb-1">
+              <input class="form-check-input" type="checkbox" id="goalId" name="name">
+              <label class="form-check-label" for="goalId">
+                Default checkbox
+              </label>
+            </div> -->
+          </div>
+          <!-- <form class="py-2" onsubmit="app.todosController.handleTodoForm()">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="goal" placeholder="make bed" name="description" required
+                minlength="1" maxlength="20">
+              <label for="goal">Goal</label>
+            </div>
+            <div class=" text-end"><button class="btn btn-success" type="submit">Make Goal</button></div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-7 text-center m-auto">
+          <div class="glass-card fw-bold text-dark p-3 rounded">
+            <p id="quote"></p>
+            <p id="author" class="on-hover"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/App.js" type="module"></script>
+</body>
+
+</html>
